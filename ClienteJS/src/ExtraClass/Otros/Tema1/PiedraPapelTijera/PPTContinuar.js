@@ -49,7 +49,7 @@ do {
 
     // Resultado final de la partida
     alert("Resultado final:\n" +
-          jugador1 + ": " + rondasJ1 + " rondas ganadas\n" +
+          jugador1 + ": " + rondasJ1 + " rondas ganadas" +
           jugador2 + ": " + rondasJ2 + " rondas ganadas");
 
     // Preguntar si quiere jugar otra partida

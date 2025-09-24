@@ -17,12 +17,12 @@ function jugar() {
         let arrayj2 = jugada2.split(" ");
 
         for (let i = 0; i < arrayj1.length; i++) {
-            if (arrayj1[i] == arrayj2[i]) {
+            if (arrayj1[i] === arrayj2[i]) {
                 // Empate en esta jugada
             } else if (
-                (arrayj1[i] == "piedra" && arrayj2[i] == "tijera") ||
-                (arrayj1[i] == "papel" && arrayj2[i] == "piedra") ||
-                (arrayj1[i] == "tijera" && arrayj2[i] == "papel")
+                (arrayj1[i] === "piedra" && arrayj2[i] === "tijera") ||
+                (arrayj1[i] === "papel" && arrayj2[i] === "piedra") ||
+                (arrayj1[i] === "tijera" && arrayj2[i] === "papel")
             ) {
                 contador1++;
             } else {
@@ -34,20 +34,20 @@ function jugar() {
 
         if (contador1 > contador2) {
             alert("Gana " + jugador1);
-            rondasJ1 = rondasJ1 + 1;
+            rondasJ1++;
         } else if (contador2 > contador1) {
             alert("Gana " + jugador2);
-            rondasJ2 = rondasJ2 + 1;
+            rondasJ2++;
         } else {
             alert("Empate");
         }
 
-        rondas = rondas - 1; // restamos una ronda
+        rondas--; // restamos una ronda
     }
 
     // Resultado final de la partida
-    alert("Resultado final:\n" +
-          jugador1 + ": " + rondasJ1 + " rondas ganadas\n" +
+    alert("Resultado final:" +
+          jugador1 + ": " + rondasJ1 + " rondas ganadas" +
           jugador2 + ": " + rondasJ2 + " rondas ganadas");
 }
 
