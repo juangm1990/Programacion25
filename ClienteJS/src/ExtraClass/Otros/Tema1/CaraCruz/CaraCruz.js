@@ -23,7 +23,7 @@ function caraOCruz() {
                 rachaMaxima = racha;
             }
         } else {
-            alert("¡Has fallado! Racha = 0");
+            alert("¡Has fallado! + contador");
             racha = 0;
         }
 
@@ -33,4 +33,9 @@ function caraOCruz() {
 }
 
 // Ejecutar el juego
-caraOCruz();
+
+
+    
+    caraOCruz();
+
+
