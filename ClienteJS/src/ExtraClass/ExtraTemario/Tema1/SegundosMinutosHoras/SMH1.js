@@ -6,7 +6,6 @@ function CalSegHoras (h){
     return h * 3600
 }
 
-
 let CalSegHoras = 
 
 

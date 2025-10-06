@@ -1,55 +1,61 @@
 function jugarPiedraPapelTijera() {
-    let nombreJugador1 = prompt("Ingrese nombre del jugador 1:");
-    let nombreJugador2 = prompt("Ingrese nombre del jugador 2:");
+    let nombreJugador1 = prompt("Introduce el nombre del jugador 1:");
+    let nombreJugador2 = prompt("Introduce el nombre del jugador 2:");
 
-    // Número de rondas
-    let rondas = parseInt(prompt("¿Cuántas rondas quieren jugar?"));
+    // Control del bucle para pedir un número válido de rondas
+    let rondasCorrectas = false;
+    let rondas;
 
-    if (rondas <= 0) {
-        alert("Número de rondas no válido.");
-        return;
+    while (rondasCorrectas == false) {
+        rondas = prompt("¿Cuántas rondas quieren jugar?");
+        
+        if (rondas > 0) {
+            rondasCorrectas = true;
+        } else {
+            console.log("Número no válido. Introduce un número mayor que 0.");
+        }
     }
 
-    // Contadores
+    // Contadores de resultados
     let victoriasJugador1 = 0;
     let victoriasJugador2 = 0;
     let empates = 0;
 
-    // Rondas
+    // Bucle principal de juego
     for (let i = 1; i <= rondas; i++) {
         let jugada1 = prompt(nombreJugador1 + " elige: piedra, papel o tijera");
         let jugada2 = prompt(nombreJugador2 + " elige: piedra, papel o tijera");
 
-        if (jugada1 === jugada2) {
-            alert("Ronda " + i + ": Empate");
+        if (jugada1 == jugada2) {
+            console.log("Ronda " + i + ": Empate");
             empates = empates + 1;
         } else if (
-            (jugada1 === "piedra" && jugada2 === "tijera") ||
-            (jugada1 === "papel" && jugada2 === "piedra") ||
-            (jugada1 === "tijera" && jugada2 === "papel")
+            (jugada1 == "piedra" && jugada2 == "tijera") ||
+            (jugada1 == "papel" && jugada2 == "piedra") ||
+            (jugada1 == "tijera" && jugada2 == "papel")
         ) {
-            alert("Ronda " + i + ": Gana " + nombreJugador1);
+            console.log("Ronda " + i + ": Gana " + nombreJugador1);
             victoriasJugador1 = victoriasJugador1 + 1;
         } else {
-            alert("Ronda " + i + ": Gana " + nombreJugador2);
+            console.log("Ronda " + i + ": Gana " + nombreJugador2);
             victoriasJugador2 = victoriasJugador2 + 1;
         }
     }
 
-    // Resultados finales
-    alert("Resultados finales:" +
-          "\n" + nombreJugador1 + " victorias: " + victoriasJugador1 +
-          "\n" + nombreJugador2 + " victorias: " + victoriasJugador2 +
-          "\nEmpates: " + empates);
+    // Mostrar resultados finales
+    console.log("Resultados finales:");
+    console.log(nombreJugador1 + " victorias: " + victoriasJugador1);
+    console.log(nombreJugador2 + " victorias: " + victoriasJugador2);
+    console.log("Empates: " + empates);
 
     if (victoriasJugador1 > victoriasJugador2) {
-        alert("El ganador es: " + nombreJugador1);
+        console.log("El ganador es: " + nombreJugador1);
     } else if (victoriasJugador2 > victoriasJugador1) {
-        alert("El ganador es: " + nombreJugador2);
+        console.log("El ganador es: " + nombreJugador2);
     } else {
-        alert("El juego terminó en empate");
+        console.log("El juego terminó en empate");
     }
 }
 
-// Ejecutar partida
+// Ejecutar la partida
 jugarPiedraPapelTijera();
