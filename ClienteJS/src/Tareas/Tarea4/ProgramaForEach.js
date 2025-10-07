@@ -38,7 +38,7 @@ function borrarTarea() {
 
             let num = prompt("Escribe el número de la tarea que quieres borrar:") - 1;
 
-            // Creamos una nueva lista sin esa tarea
+            // Crear nueva lista sin esa tarea
             let nuevaLista = [];
             categorias[opcion2].forEach(function(tarea, indice) {
                 if (indice != num) {
@@ -59,27 +59,26 @@ function borrarTarea() {
 }
 
 function listarTareas() {
-    console.log("LISTA DE TAREAS");
-    console.log(" ");
-
+    let mensaje = "LISTA DE TAREAS\n\n";
     let nombres = ["DWEC", "DWES", "EMPLEO", "PERSONAL"];
 
     categorias.forEach(function(categoria, indice) {
-        console.log(nombres[indice]);
-        console.log("----------------------");
+        mensaje = mensaje + nombres[indice] + "\n";
+        mensaje = mensaje + "----------------------\n";
 
         if (categoria.length == 0) {
-            console.log("(No hay tareas)");
+            mensaje = mensaje + "(No hay tareas)\n";
         } else {
             categoria.forEach(function(tarea, num) {
-                console.log((num + 1) + ". " + tarea);
+                mensaje = mensaje + (num + 1) + ". " + tarea + "\n";
             });
         }
 
-        console.log(" ");
+        mensaje = mensaje + "\n";
     });
 
-    alert("Se ha mostrado la lista de tareas en la consola.");
+    alert(mensaje); // MOSTRAR POR PANTALLA 
+    console.log(mensaje); // MOSTRAR POR CONSOLA
 }
 
 let opcion;
