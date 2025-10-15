@@ -10,12 +10,3 @@ http://localhost:8080/carta1.png
 
 let primeraCarta = document.querySelector("#c1")
 primeraCarta.src = "http://localhost:8080/carta1.png"
-
-
-CREAR ELEMENTOS EN HTML
-
-MODIFICAR ELEMENTOS
-
-MODIFICAR CSS 
-
-BINGO

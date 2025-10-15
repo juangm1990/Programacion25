@@ -1,10 +1,10 @@
 function jugarPiedraPapelTijera() {
     // Pedir nombres
     let nombreJugador1 = prompt("Introduce el nombre del jugador 1:");
-    let jugadasJugador1 = prompt("Introduce las jugadas de " + nombreJugador1 + " (ejemplo: piedra papel tijera):");
+    let jugadasJugador1 = prompt("Introduce las jugadas de " + nombreJugador1 + " (Ejemplo: Piedra, papel o tijera):");
 
     let nombreJugador2 = prompt("Introduce el nombre del jugador 2:");
-    let jugadasJugador2 = prompt("Introduce las jugadas de " + nombreJugador2 + " (ejemplo: piedra papel tijera):");
+    let jugadasJugador2 = prompt("Introduce las jugadas de " + nombreJugador2 + " (Ejemplo: Piedra, papel o tijera):");
 
     // Separar las jugadas con split (espacios)
     let listaJugadas1 = jugadasJugador1.split(" ");
